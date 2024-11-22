@@ -1,0 +1,10 @@
+
+
+
+<div class="container mt-3">
+  <h5 >Active Job Posts</h5>
+  <app-job-table *ngIf="jobs.length > 0" [jobs]="jobs" (jobClosed)="onJobClosed($event)" ></app-job-table>
+  <p *ngIf="jobs.length == 0">Please create job post</p>
+</div>
+
+

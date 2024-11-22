@@ -1,0 +1,42 @@
+
+  <div class="col bg-body-secondary position-sticky" style="height: 25vh; position: fixed;margin-top: -20px;">
+    <div class="row p-3 text-center d-flex justify-content-around">
+      <!-- Search Bar Container -->
+      <div class="col-auto mt-5">
+        <input type="search" placeholder="Search by job" class="form-control" style="width: 250px;">
+      </div>
+      <div class="col-auto mt-5">
+        <input type="search" placeholder="Search by location" class="form-control" style="width: 250px;">
+      </div>
+      <div class="col-auto mt-5">
+        <input type="search" placeholder="Search by category" class="form-control" style="width: 250px;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="container">
+  <!-- Message when no jobs are available -->
+  <div class="col">
+    <div *ngIf="jobs.length === 0" class="text-center">
+      <p>Job Applications not available</p>
+    </div>
+  
+    <!-- Job List Container -->
+    <div *ngIf="jobs.length > 0">
+      <div class="col-12 p-3  job-list-container">
+        <div class="list-group list-group-flush">
+          <div *ngFor="let job of jobs" class="list-group-item py-3 lh-sm">
+            <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
+              <app-job-card [job]="job"></app-job-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

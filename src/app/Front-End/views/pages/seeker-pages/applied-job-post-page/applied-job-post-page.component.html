@@ -1,0 +1,17 @@
+<main class="container mt-3">
+  <div *ngIf="jobs.length === 0" class="container bg-body-secondary text-center">
+    <p>No JObs Applied</p>
+  </div>
+
+  <div *ngIf="jobs.length > 0" class="row d-flex justify-content-between" style="margin-top: -20px; position: sticky;">
+    <div class="  p-3" style=" position: sticky; top: 0; ">
+      <div class="list-group list-group-flush">
+        <div *ngFor="let job of jobs" class="list-group-item  py-3 lh-sm">
+          <div class="d-flex align-items-center justify-content-center">
+            <app-job-card [job]="job"  ></app-job-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

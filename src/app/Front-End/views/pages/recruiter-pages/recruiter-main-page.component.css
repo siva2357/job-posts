@@ -1,0 +1,14 @@
+/* Sidebar */
+
+  /* Main Content */
+  .main-content {
+    padding: 20px;
+    margin-left: 75px; /* Default margin to match closed sidebar */
+  }
+  
+  .main-content.shifted {
+    margin-left: 250px; /* Shift when sidebar is open */
+    width: calc(100% - 235px); /* Adjust width based on sidebar open state */
+  }
+  
+

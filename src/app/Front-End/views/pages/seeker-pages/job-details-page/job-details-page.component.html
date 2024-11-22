@@ -1,0 +1,111 @@
+<!-- Sticky Header -->
+<div class="container-fluid position-sticky py-2">
+  <div class="d-flex align-items-center">
+    <i class="bi bi-arrow-left fs-3 me-2" style="cursor: pointer;" (click)="goBack()"></i>
+    <p class="m-0 fw-bold">Back</p>
+  </div>
+</div>
+
+<main class="container my-4">
+  <div class="row g-4 justify-content-center">
+
+    <!-- Job Details Section -->
+    <div class="col-7">
+      
+      <!-- Company Info -->
+      <div class="d-flex align-items-center mb-3">
+        <div class="me-3">
+          <img src="https://res.cloudinary.com/dpp8aspqs/image/upload/v1710832065/cyan-paint-brush-band-766278995_ikd5gy.jpg" 
+               alt="Company Logo" class="rounded-circle" style="width: 50px; height: 50px;">
+        </div>
+        <div>
+          <h5 class="mb-0 fw-bold">Company Sector</h5>
+          <p class="mb-0 text-muted">Company Description</p>
+        </div>
+      </div>
+
+      <!-- Job Info -->
+      <div class="row d-flex justify-content-between  mb-4 mt-5">
+        <div class="col-6 text-start">
+          <p class="mb-1"><i class="bi bi-calendar-event me-2"></i>Posted On</p>
+          <p class="fw-bold">{{ job.postedOn | date: 'dd/MM/yyyy' }}</p>
+        </div>
+        <div class="col-6 text-end">
+          <p class="mb-1"><i class="bi bi-calendar-check me-2"></i>Apply By</p>
+          <p class="fw-bold">{{ job.applyByDate | date: 'dd/MM/yyyy' }}</p>
+        </div>
+      </div>
+
+      <!-- Job Highlights -->
+      <div class="card border mb-4 p-3">
+        <div class="row text-start">
+          <div class="col-4">
+            <p class="mb-1"><i class="bi bi-cash"></i> Salary</p>
+            <p class="fw-bold">{{ job.salary }}</p>
+          </div>
+          <div class="col-4">
+            <p class="mb-1"><i class="bi bi-geo-alt"></i> Location</p>
+            <p class="fw-bold">{{ job.location }}</p>
+          </div>
+          <div class="col-4">
+            <p class="mb-1"><i class="bi bi-tv"></i> Platform</p>
+            <p class="fw-bold">{{ job.platform }}</p>
+          </div>
+        </div>
+
+        <div class="row text-start">
+          <div class="col-4">
+            <p class="mb-1"><i class="bi bi-people"></i> Openings</p>
+            <p class="fw-bold">{{ job.vacancy }}</p>
+          </div>
+          <div class="col-4">
+            <p class="mb-1"><i class="bi bi-briefcase"></i> Job Role</p>
+            <p class="fw-bold">{{ job.jobRoleTitle }}</p>
+          </div>
+          <div class="col-4">
+            <p class="mb-1"><i class="bi bi-building"></i> Job Type</p>
+            <p class="fw-bold">{{ job.jobType }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Job Description -->
+      <h6 class="fw-bold">Job Description:</h6>
+      <div class="card border p-3 mb-4">
+        <p class="mb-0 text-justify">{{ job.jobDescription }}</p>
+      </div>
+
+      <!-- Recruiter Info -->
+      <h6 class="fw-bold">Posted By:</h6>
+      <div class="card border p-3 mb-4">
+        <div class="d-flex align-items-center">
+          <div class="me-3">
+            <img src="https://res.cloudinary.com/dpp8aspqs/image/upload/v1710832065/cyan-paint-brush-band-766278995_ikd5gy.jpg" alt="Recruiter Name" class="rounded-circle" style="width: 50px; height: 50px;">
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold">Recruiter Name</h6>
+            <p class="mb-0 text-muted">Recruiter Designation</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company Description -->
+      <h6 class="fw-bold">About Company:</h6>
+      <div class="card border p-3">
+        <p class="mb-0 text-justify">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Apply Section -->
+    <div class="col-4 d-flex align-items-start">
+      <div class="card border text-center p-3 w-100">
+        <button class="btn btn-success rounded-0 px-5" (click)="confirmApply(job)">Apply</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+

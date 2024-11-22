@@ -1,0 +1,52 @@
+/* For better styling and ensuring text wrapping */
+.dropdown-menu {
+    width: 300px;  /* Adjust width to fit content */
+    max-height: 400px; /* Optional: Add scroll if notifications exceed height */
+    overflow-y: auto;
+}
+
+/* Notification badge position */
+.notification-badge {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 0.8rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Message container - Truncate text for collapsed messages */
+.message-container {
+    max-width: 250px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Expanded message - Allow text wrapping */
+.message-container .expanded {
+    white-space: normal; /* Expands the text to wrap lines when clicked */
+}
+
+/* Link style for 'View More' / 'View Less' */
+.message-container a {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Hover effect for links */
+.message-container a:hover {
+    text-decoration: underline;
+}
+
+/* Additional spacing between messages if needed */
+.dropdown-item {
+    padding: 10px 15px;
+}

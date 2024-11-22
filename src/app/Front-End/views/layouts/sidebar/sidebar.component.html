@@ -1,0 +1,13 @@
+<!-- sidebar.component.html -->
+<div class="sidebar"  [ngClass]="{'open': sidebarOpen}">
+  <ul class="nav-list" style="margin-top: 80px;">
+    <li *ngFor="let menu of menuItems" style="margin-top: 20px;">
+      <a [routerLink]=menu.link>
+        <i [class]="menu.icon" style="font-size: 1.6rem;"></i>
+        <span class="links_name" style="margin-left: 30px;">{{ menu.label }}</span>
+      </a>
+      <span class="tooltip">{{ menu.label }}</span>
+    </li>
+  </ul>
+
+</div>
